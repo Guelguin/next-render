@@ -19,7 +19,7 @@ export default async function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const d = await getData();
+    // const d = await getData();
     return (
         <html>
             <head></head>
