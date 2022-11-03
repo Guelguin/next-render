@@ -20,7 +20,7 @@ function Regenerate(props: Props) {
 
     return (
         <>
-            {props?.date && <p>Page generated on: {props?.date}</p>}
+            {/* {props?.date && <p>Page generated on: {props?.date}</p>}
             <div>
                 <a
                     href={`${protocol}//${host}/api/regenerate`}
@@ -30,7 +30,7 @@ function Regenerate(props: Props) {
                     Regenerate site
                 </a>{' '}
                 <small>(takes a minute)</small>
-            </div>
+            </div> */}
         </>
     );
 }

@@ -68,19 +68,19 @@ export async function getStaticProps(context: any) {
 }
 
 export async function getStaticPaths(context: any) {
-    const res =
-        [
-            { params: { slug: 'static-generated' } },
-            { params: { slug: 'static-generated2' } },
-        ] ||
-        (await fetch('https://static-next.vercel.app/api/getRoutes').then(
-            (res) => res.json()
-        ));
-    console.log('getStaticPaths', res, context);
-    return {
-        paths: res,
-        fallback: true,
-    };
+    // const res =
+    //     [
+    //         { params: { slug: 'static-generated' } },
+    //         { params: { slug: 'static-generated2' } },
+    //     ] ||
+    //     (await fetch('https://static-next.vercel.app/api/getRoutes').then(
+    //         (res) => res.json()
+    //     ));
+    // console.log('getStaticPaths', res, context);
+    // return {
+    //     paths: res,
+    //     fallback: true,
+    // };
 }
 
 export default Index;

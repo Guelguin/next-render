@@ -11,7 +11,7 @@ function Menu(props: any) {
             <Link href="/" onClick={props.onClick}>
                 Home
             </Link>
-            <Link
+            {/* <Link
                 href="/ssg/[slug]"
                 as="/ssg/static-generated"
                 onClick={props.onClick}
@@ -24,7 +24,7 @@ function Menu(props: any) {
                 onClick={props.onClick}
             >
                 Static 2
-            </Link>
+            </Link> */}
             <Link
                 href="/ssr/[slug]"
                 as="/ssr/server-side-rendered"
@@ -81,7 +81,7 @@ function Menu(props: any) {
             >
                 Static Regen 2
             </Link>
-            <Link
+            {/* <Link
                 href="/app/[slug]"
                 as="/app/react-server-components"
                 onClick={props.onClick}
@@ -94,7 +94,7 @@ function Menu(props: any) {
                 onClick={props.onClick}
             >
                 RSC 2
-            </Link>
+            </Link> */}
         </nav>
     );
 }

@@ -26,7 +26,7 @@ function Index(props: any) {
                         Home
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link
                         href="/ssg/[slug]"
                         as="/ssg/static-generated"
@@ -43,7 +43,7 @@ function Index(props: any) {
                     >
                         Static 2
                     </Link>
-                </li>
+                </li> */}
             </ul>{' '}
             <p>
                 On dynamically rendered pages the date behind "Page generated
@@ -123,7 +123,7 @@ function Index(props: any) {
                         ISR 2
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link
                         href="/app/[slug]"
                         as="/app/react-server-components"
@@ -131,8 +131,8 @@ function Index(props: any) {
                     >
                         RSC
                     </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <Link
                         href="/app/[slug]"
                         as="/app/react-server-components2"
@@ -140,7 +140,7 @@ function Index(props: any) {
                     >
                         RSC 2
                     </Link>
-                </li>
+                </li> */}
             </ul>
             <Regenerate date={props?.date} />
             <DebugArea value={props?.debugValue} />

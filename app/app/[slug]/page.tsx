@@ -5,25 +5,25 @@ import { Suspense } from 'react';
 import { Client } from './client';
 import { Server } from './server';
 
-async function getData(delay?: number): Promise<{ date: string }> {
-    return new Promise((resolve, reject) => {
-        fetch(
-            `https://static-next.vercel.app/api/test${
-                delay ? `?delay=${delay}` : ''
-            }`
-        )
-            .then((res) => res.json())
-            .then((json) => {
-                setTimeout(() => resolve(json), delay);
-            })
-            .catch(reject);
-    });
-}
+// async function getData(delay?: number): Promise<{ date: string }> {
+//     return new Promise((resolve, reject) => {
+//         fetch(
+//             `githubCI${
+//                 delay ? `?delay=${delay}` : ''
+//             }`
+//         )
+//             .then((res) => res.json())
+//             .then((json) => {
+//                 setTimeout(() => resolve(json), delay);
+//             })
+//             .catch(reject);
+//     });
+// }
 
 export default async function Page({ params }: any) {
-    const data = await getData();
-    const data2 = await getData(Math.random() * 5000);
-    const data3 = await getData(Math.random() * 5000);
+    // const data = await getData();
+    // const data2 = await getData(Math.random() * 5000);
+    // const data3 = await getData(Math.random() * 5000);
 
     return (
         <>
@@ -45,22 +45,22 @@ export default async function Page({ params }: any) {
                 <li>
                     Server:
                     <Suspense fallback={<Loading />}>
-                        <Server date={data2.date} />
+                        {/* <Server date={data2.date} /> */}
                     </Suspense>
                 </li>
                 <li>
                     Client:
                     <Suspense fallback={<Loading />}>
-                        <Client date={data3.date} />
+                        {/* <Client date={data3.date} /> */}
                     </Suspense>
                 </li>
             </ul>
 
             <Suspense fallback={<Loading />}>
-                <Regenerate date={data.date} />
+                {/* <Regenerate date={data.date} /> */}
             </Suspense>
             <Suspense fallback={<Loading />}>
-                <DebugArea value={data.date} />
+                {/* <DebugArea value={data.date} /> */}
             </Suspense>
         </>
     );
